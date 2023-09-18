@@ -13,25 +13,26 @@ comment [line] <number>:
 comment <number> until <number>:
     user.select_range(number_1, number_2)
     code.toggle_comment()
-clear [line] <number>:
+deli [line] <number>:
+    edit.jump_line(number)
     user.select_range(number, number)
     edit.delete()
-clear <number> until <number>:
+deli <number> until <number>:
     user.select_range(number_1, number_2)
     edit.delete()
-copy [line] <number>:
+snippet [line] <number>:
     user.select_range(number, number)
     edit.copy()
-copy <number> until <number>:
+snippet <number> until <number>:
     user.select_range(number_1, number_2)
     edit.copy()
-cut [line] <number>:
+slice [line] <number>:
     user.select_range(number, number)
     edit.cut()
-cut [line] <number> until <number>:
+slice [line] <number> until <number>:
     user.select_range(number_1, number_2)
     edit.cut()
-(paste | replace) <number> until <number>:
+(spark | replace) <number> until <number>:
     user.select_range(number_1, number_2)
     edit.paste()
 (select | cell | sell) [line] <number>: user.select_range(number, number)

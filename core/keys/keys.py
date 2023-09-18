@@ -2,7 +2,6 @@ from talon import Context, Module, actions, app
 
 from ..user_settings import get_list_from_csv
 
-
 def setup_default_alphabet():
     """set up common default alphabet.
 
@@ -170,56 +169,50 @@ punctuation_words = {
     "right paren": ")",
 }
 symbol_key_words = {
+    "pebble": ".",
     "dot": ".",
-    "point": ".",
-    "quote": "'",
-    "question": "?",
-    "apostrophe": "'",
-    "L square": "[",
-    "left square": "[",
+    "ticky": "'",
+    "box": "[",
     "square": "[",
-    "R square": "]",
-    "right square": "]",
+    "open box": "[",
+    "open square": "[",
+    "close box": "[",
+    "close square": "]",
     "slash": "/",
     "backslash": "\\",
     "minus": "-",
-    "dash": "-",
     "equals": "=",
     "plus": "+",
     "grave": "`",
     "tilde": "~",
     "bang": "!",
-    "down score": "_",
-    "underscore": "_",
+    "dollar": "$",
+    "underbar": "_",
+    "round": "(",
+    "open round": "(",
+    "close round": ")",
     "paren": "(",
-    "brace": "{",
-    "left brace": "{",
-    "brack": "{",
-    "bracket": "{",
-    "left bracket": "{",
-    "r brace": "}",
-    "right brace": "}",
-    "r brack": "}",
-    "r bracket": "}",
-    "right bracket": "}",
+    "open paren": "(",
+    "close paren": ")",
+    "curly": "{",
+    "open curly": "{",
+    "close curly": "}",
     "angle": "<",
-    "left angle": "<",
+    "open angle": "<",
+    "diamond": "<",
+    "open diamond": "<",
+    "close diamond": ">",
     "less than": "<",
-    "rangle": ">",
-    "R angle": ">",
-    "right angle": ">",
+    "close angle": ">",
     "greater than": ">",
     "star": "*",
-    "hash": "#",
+    "hash tag": "#",
     "percent": "%",
-    "caret": "^",
+    "caret sign": "^",
     "amper": "&",
     "pipe": "|",
-    "dub quote": '"',
-    "double quote": '"',
-    # Currencies
-    "dollar": "$",
-    "pound": "£",
+    "quote": '"',
+    "quad": '"'
 }
 
 # make punctuation words also included in {user.symbol_keys}
@@ -235,22 +228,20 @@ ctx.lists["self.arrow_key"] = {
 }
 
 simple_keys = [
-    "end",
-    "enter",
+    # "end",
+    "return",
     "escape",
-    "home",
-    "insert",
+    "home key",
+    # "insert",
     "pagedown",
     "pageup",
-    "space",
-    "tab",
+    "gap",
+    "indent",
 ]
 
 alternate_keys = {
-    "wipe": "backspace",
-    "delete": "backspace",
-    #'junk': 'backspace',
-    "forward delete": "delete",
+    "delete": "delete",
+    'junk': 'backspace',
     "page up": "pageup",
     "page down": "pagedown",
 }

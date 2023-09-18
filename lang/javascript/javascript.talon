@@ -17,6 +17,15 @@ tag(): user.code_operators_bitwise
 tag(): user.code_operators_lambda
 tag(): user.code_operators_math
 
+state log:
+  insert("console.log()")
+  key(left)
+
+arrow function:
+  " () => {"
+  key(enter)
+  key(tab)
+
 settings():
     user.code_private_function_formatter = "PRIVATE_CAMEL_CASE"
     user.code_protected_function_formatter = "PRIVATE_CAMEL_CASE"

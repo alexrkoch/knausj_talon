@@ -14,6 +14,8 @@ cap: user.dictation_format_cap()
 ^(no space | no-space) that$: user.dictation_reformat_no_space()
 
 # Navigation
+return:
+  key(return)
 go up <number_small> (line | lines):
     edit.up()
     repeat(number_small - 1)
