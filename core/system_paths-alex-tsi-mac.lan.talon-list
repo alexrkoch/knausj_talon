@@ -1,0 +1,16 @@
+list: user.system_paths
+hostname: alex-tsi-mac.lan
+-
+user: /Users/alex
+desktop: /Users/alex/Desktop
+desk: /Users/alex/Desktop
+documents: /Users/alex/Documents
+docks: /Users/alex/Documents
+downloads: /Users/alex/Downloads
+music: /Users/alex/Music
+pictures: /Users/alex/Pictures
+videos: /Users/alex/Videos
+talon home: /Users/alex/.talon
+talon recordings: /Users/alex/.talon/recordings
+talon user: /Users/alex/.talon/user
+home: /Users/alex
