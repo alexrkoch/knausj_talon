@@ -21,11 +21,22 @@ settings():
     # Uncomment to always sort help contexts alphabetically.
     # user.help_sort_contexts_by_specificity = false
 
-    # Set the scroll amount for continuous scroll/gaze scroll
-    user.mouse_continuous_scroll_amount = 200
+    # Set the scroll amount for continuous scroll
+    user.mouse_continuous_scroll_amount = 8
+    # Ark value
+    # user.mouse_continuous_scroll_amount = 200
+
+    # Set the scroll multiplier for gaze scroll
+    user.mouse_gaze_scroll_speed_multiplier = 1.0
+
+    # Set the maximum acceleration factor when scrolling continuously. 1=constant speed/no acceleration.
+    user.mouse_continuous_scroll_acceleration = 1
 
     # If `true`, stop continuous scroll/gaze scroll with a pop
     user.mouse_enable_pop_stops_scroll = true
+
+    # If `true`, stop mouse drag with a pop
+    user.mouse_enable_pop_stops_drag = true
 
     # Choose how pop click should work in 'control mouse' mode
     # 0 = off
@@ -35,6 +46,10 @@ settings():
 
     # If `true`, use a hissing noise to scroll continuously
     user.mouse_enable_hiss_scroll = false
+
+    # How much time a hiss must last for to be considered a hiss rather than
+    # part of speech, in ms
+    user.hiss_scroll_debounce_time = 100
 
     # If `true`, hide the continuous scroll/gaze scroll GUI
     user.mouse_hide_mouse_gui = true
@@ -57,9 +72,16 @@ settings():
     # Set the total number of command history lines to display
     user.command_history_size = 10
 
+    # Set the time window size for to for pop_twice_to_sleep and pop_twice_to_repeat. By default, the pops must be more than 0.1 seconds apart and less then 0.3 seconds, to reduce false positives
+    user.double_pop_speed_minimum = 0.1
+    user.double_pop_speed_maximum = 0.3
+
     # Uncomment to add a directory (relative to the Talon user dir) with additional
     # .snippet files. Changing this setting requires a restart of Talon.
     # user.snippets_dir = "snippets"
+
+    # Set to the number of spaces to use for each tab when inserting snippets as raw text (without editor support). Set to -1 to insert tabs as tabs, such as in code editors that can expand tabs in pasted or typed text. This setting is provided for applications like web browsers and chat apps that do not understand code formatting.
+    user.snippet_raw_text_spaces_per_tab = 4
 
     # Uncomment to insert text longer than 10 characters (customizable) by pasting from
     # the clipboard. This is often faster than typing.
@@ -80,6 +102,9 @@ settings():
     # Puts Talon into sleep mode if no commands are spoken for a defined period of time.
     # user.listening_timeout_minutes = 3
 
+    # Time in seconds to wait for the clipboard to change when trying to get selected text
+    # user.selected_text_timeout = 0.25
+
 # Uncomment to enable the curse yes/curse no commands (show/hide mouse cursor).
 # See issue #688 for more detail: https://github.com/talonhub/community/issues/688
 # tag(): user.mouse_cursor_commands_enable
@@ -88,4 +113,4 @@ settings():
 # By default saying "one" would write "1", however many users find this behavior
 # prone to false positives. If you uncomment this, you will need to say
 # "numb one" to write "1". Note that this tag will eventually be activated by default
-tag(): user.prefixed_numbers
+# tag(): user.prefixed_numbers

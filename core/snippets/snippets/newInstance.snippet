@@ -2,7 +2,7 @@ name: newInstance
 phrase: instance
 ---
 
-language: javascript | java
+language: cpp | csharp | java | javascript | typescript | javascriptreact | typescriptreact
 -
 new $1($0);
 ---
@@ -10,4 +10,9 @@ new $1($0);
 language: python
 -
 $1($0)
+---
+
+language: go
+-
+$1{$0}
 ---

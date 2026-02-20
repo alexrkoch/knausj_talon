@@ -6,6 +6,8 @@ tag(): user.line_commands
 tag(): user.multiple_cursors
 tag(): user.splits
 tag(): user.tabs
+tag(): user.command_search
+
 tag(): user.git
 tag(): terminal
 
@@ -157,10 +159,6 @@ action(user.multi_cursor_select_fewer_occurrences): user.vscode("Cursor Undo")
 action(user.multi_cursor_select_more_occurrences): user.vscode("Add Selection To Next Find Match")
 #multiple_cursor.py support end
 
-please [<user.text>]:
-    user.vscode("workbench.action.showCommands")
-    insert(user.text or "")
-
 go view [<user.text>]:
     user.vscode("workbench.action.openView")
     insert(user.text or "")
@@ -214,7 +212,6 @@ show snippets: user.vscode("workbench.action.openSnippets")
 
 # VSCode Snippets
 snip (last | previous): user.vscode("jumpToPrevSnippetPlaceholder")
-snip next: user.vscode("jumpToNextSnippetPlaceholder")
 
 # Display
 centered switch: user.vscode("workbench.action.toggleCenteredLayout")
