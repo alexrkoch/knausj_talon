@@ -28,3 +28,6 @@ snap <user.running_applications> [screen] <number>:
 browse: user.switcher_focus('Google Chrome')
 code: user.switcher_focus('Code')
 notes: user.switcher_focus('Obsidian')
+slack: user.switcher_focus('Slack')
+terminal: user.switcher_focus('Terminal')
+mongo: user.switcher_focus('Mongo')
