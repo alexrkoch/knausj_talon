@@ -33,10 +33,10 @@ settings():
     user.mouse_continuous_scroll_acceleration = 1
 
     # If `true`, stop continuous scroll/gaze scroll with a pop
-    user.mouse_enable_pop_stops_scroll = true
+    user.mouse_enable_pop_stops_scroll = false
 
     # If `true`, stop mouse drag with a pop
-    user.mouse_enable_pop_stops_drag = true
+    user.mouse_enable_pop_stops_drag = false
 
     # Choose how pop click should work in 'control mouse' mode
     # 0 = off
