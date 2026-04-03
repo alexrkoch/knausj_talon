@@ -1,6 +1,7 @@
 #custom vscode commands go here
 app: vscode
 -
+
 tag(): user.find_and_replace
 tag(): user.line_commands
 tag(): user.multiple_cursors
@@ -276,12 +277,10 @@ refactor rename: user.vscode("editor.action.rename")
 refactor this: user.vscode("editor.action.refactor")
 
 #code navigation
-#(go declaration | follow): user.vscode("Go to Declaration")
-#go back: user.vscode("workbench.action.navigateBack")
-#go forward:  user.vscode("workbench.action.navigateForward")
-#go implementation: user.vscode("Go to Implementation")
-#go recent: user.vscode("File: Open Recent")
-#go type: user.vscode("editor.action.goToTypeDefinition")
+go declaration | follow: user.vscode("editor.action.revealDefinition")
+go back: user.vscode("workbench.action.navigateBack")
+go forward: user.vscode("workbench.action.navigateForward")
+go implementation: user.vscode("editor.action.goToImplementation")
 go type: user.vscode("editor.action.goToTypeDefinition")
 go usage: user.vscode("references-view.find")
 go recent [<user.text>]:
@@ -467,8 +466,7 @@ terminal <number_small>: user.vscode_terminal(number_small)
 task run [<user.text>]:
     user.vscode("workbench.action.tasks.runTask")
     insert(user.text or "")
-#TODO: should this be added to linecommands?
-(copy line down | shingles): user.vscode("editor.action.copyLinesDownAction")
+copy line down: user.vscode("editor.action.copyLinesDownAction")
 copy line up: user.vscode("editor.action.copyLinesUpAction")
 
 #Expand/Shrink AST Selection
