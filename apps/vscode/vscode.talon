@@ -109,13 +109,9 @@ close:
   edit.line_end()
   insert(";")
 
-use node fourteen:
-  "nvm use 14.19.0"
-  key(enter)
-
-use node eighteen:
-  "nvm use 18.16.1"
-  key(enter)
+line end:
+  key(escape)
+  edit.line_end()
 
 #talon app actions
 action(app.tab_close): user.vscode("workbench.action.closeActiveEditor")
