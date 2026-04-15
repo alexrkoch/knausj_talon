@@ -162,6 +162,7 @@ go view [<user.text>]:
 
 # Copilot
 bar chat: user.vscode("workbench.panel.chat.view.copilot.focus")
+bar clod: user.vscode("workbench.view.extension.claude-sidebar-secondary")
 chat new: user.vscode("workbench.action.chat.clear")
 chat inline: user.vscode("inlineChat.start")
 toggle copilot: user.vscode("github.copilot.toggleCopilot")
