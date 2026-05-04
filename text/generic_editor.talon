@@ -140,16 +140,16 @@ select down:
 select word:
     edit.select_word()
 
-bird:
+lake:
     edit.word_left()
 
-birch:
-    edit.word_right()
-
-blitch:
+laker:
     edit.extend_word_left()
 
-blitcher:
+rake:
+    edit.word_right()
+
+raker:
     edit.extend_word_right()
 
 select line start:
