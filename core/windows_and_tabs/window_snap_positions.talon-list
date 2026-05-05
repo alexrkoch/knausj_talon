@@ -42,3 +42,7 @@ bottom center small: BOTTOM_CENTER_SMALL
 center: CENTER
 full: FULL
 fullscreen: FULLSCREEN
+home: HOME
+dev: DEV
+tight: TIGHT
+bar: BAR
