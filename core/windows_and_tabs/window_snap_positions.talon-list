@@ -43,6 +43,7 @@ center: CENTER
 full: FULL
 fullscreen: FULLSCREEN
 home: HOME
+notes: NOTES
 dev: DEV
 tight: TIGHT
 bar: BAR
