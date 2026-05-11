@@ -29,3 +29,11 @@ show downloads: browser.show_downloads()
 show extensions: browser.show_extensions()
 show history: browser.show_history()
 show cache: browser.show_clear_cache()
+
+jira checkbox: 
+	key(enter)
+	"[] "
+	key(up)
+	sleep(100ms)
+	key(backspace)
+	key(down)
