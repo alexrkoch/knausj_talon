@@ -24,12 +24,12 @@ window reload | reload it: user.obsidian("app:reload")
 show settings: user.obsidian("app:open-settings")
 
 # note operations
-file hunt: user.obsidian("switcher:open")
-file hunt [<user.text>]:
+search files: user.obsidian("switcher:open")
+search files [<user.text>]:
     user.obsidian("switcher:open")
     sleep(50ms)
     insert(user.text or "")
-file hunt (pace | paste):
+search files (pace | paste):
     user.obsidian("switcher:open")
     sleep(50ms)
     edit.paste()
@@ -75,11 +75,12 @@ bar local graph: user.obsidian("graph:open-local")
 # formatting and lists
 bold: user.obsidian("editor:toggle-bold")
 italic: user.obsidian("editor:toggle-italics")
-code: user.obsidian("editor:toggle-code")
+# code: user.obsidian("editor:toggle-code")
 blockquote: user.obsidian("editor:toggle-blockquote")
 bullet: user.obsidian("editor:toggle-bullet-list")
 list number: user.obsidian("editor:toggle-numbered-list")
-checkbox: user.obsidian("editor:toggle-checklist-status")
+toggle checked: user.obsidian("editor:toggle-checklist-status")
+checkbox: "- [ ] "
 line numbers: user.obsidian("editor:toggle-line-numbers")
 readable length: user.obsidian("editor:toggle-readable-line-length")
 spellcheck: user.obsidian("editor:toggle-spellcheck")
