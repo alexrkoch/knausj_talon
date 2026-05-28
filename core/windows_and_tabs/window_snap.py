@@ -279,9 +279,10 @@ _snap_positions = {
     # left top right bottom
     # ARK custom:
     "HOME": RelativeScreenPos(1 / 11, 0, 10 / 11, 1),
+    "TIGHT": RelativeScreenPos(1 / 11, 0.17, 10 / 11, 1),
     "NOTES": RelativeScreenPos(1 / 11, 0, 9 / 11, 1),
     "DEV": RelativeScreenPos(1 / 12, 1 / 18, 1, 1),
-    "TIGHT": RelativeScreenPos(2 / 10, 1 / 10, 8 / 10, 9 / 10),
+    "TINY": RelativeScreenPos(2 / 10, 1 / 10, 8 / 10, 9 / 10),
     "BAR": RelativeScreenPos(2 / 10, 0, 1, 1),
 }
 
