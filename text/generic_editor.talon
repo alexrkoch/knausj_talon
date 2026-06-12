@@ -2,6 +2,9 @@
 win tag <user.number_string>:
     "WIN-{number_string}"
 
+feature tag <user.number_string>:
+    "feature/WIN-{number_string}"
+
 lorem short:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
 
