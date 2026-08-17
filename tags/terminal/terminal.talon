@@ -20,6 +20,16 @@ rerun [<user.text>]: user.terminal_rerun_search(text or "")
 rerun search: user.terminal_rerun_search("")
 kill all: user.terminal_kill_all()
 
+node run <user.text>:
+  insert("npm run {text}")
+  key(enter)
+
+node version manager <user.text>:
+  insert("nvm {text}")
+  key(enter)
+
+node run: "npm run"
+
 node run (start | dev):
   "npm run dev"
   key(enter)
@@ -34,6 +44,10 @@ node run storybook:
 
 node install:
   "npm i"
+  key(enter)
+
+git (ticks | tix): 
+  "git tix"
   key(enter)
 
 git status:

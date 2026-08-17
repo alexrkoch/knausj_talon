@@ -13,3 +13,7 @@ tab search <user.text>$:
     sleep(200ms)
     insert("{text}")
     key(down)
+
+
+jira board: user.address_navigate("https://thesocialinstitute.atlassian.net/jira/software/projects/WIN/boards/11?filter=&groupBy=none")
+jira board me: user.address_navigate("https://thesocialinstitute.atlassian.net/jira/software/projects/WIN/boards/11?filter=assignee%20%3D%20712020%3A86cdd6c9-4476-4115-961d-1a455de55d6d&groupBy=none")

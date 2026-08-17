@@ -49,6 +49,13 @@ file copy path: user.obsidian("workspace:copy-path")
 file copy full path: user.obsidian("workspace:copy-full-path")
 file copy url: user.obsidian("workspace:copy-url")
 
+# templates
+template task:
+    user.obsidian_command_by_name("Templater: open insert template modal")
+    sleep(100ms)
+    insert("win-task")
+    key(enter)
+
 # daily notes
 daily open: user.obsidian("daily-notes")
 daily previous: user.obsidian("daily-notes:goto-prev")

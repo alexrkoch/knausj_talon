@@ -333,6 +333,12 @@ class Actions:
         """Invoke an action by Obsidian command id"""
         command_uri_or_client_fallback(command_id)
 
+    def obsidian_command_by_name(name: str):
+        """Run an Obsidian command by its command-palette display name, for commands with no fixed id (e.g. Templater per-template hotkey commands)"""
+        actions.user.command_palette_key()
+        actions.insert(name)
+        actions.key("enter")
+
 
 @mac_ctx.action_class("user")
 class MacUserActions:

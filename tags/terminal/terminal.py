@@ -46,6 +46,8 @@ class Actions:
         """Escapes a string for a given terminal"""
         return actions.user.terminal_escape_string(f"{string}/")
 
+    
+
 
 @ctx.action_class("user")
 class TerminalActions:
@@ -75,3 +77,8 @@ class TerminalActions:
     def file_manager_new_folder(name: str):
         """Creates a new folder in a gui filemanager or inserts the command to do so for terminals"""
         actions.insert(f'mkdir "{name}"')
+
+    def terminal_run(string: str):
+            """Runs a string command in the terminal"""
+            actions.insert(f"{str}")
+            actions.key("enter")
