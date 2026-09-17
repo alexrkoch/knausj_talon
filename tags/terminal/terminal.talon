@@ -24,7 +24,7 @@ node run <user.text>:
   insert("npm run {text}")
   key(enter)
 
-node version manager <user.text>:
+node version <user.text>:
   insert("nvm {text}")
   key(enter)
 

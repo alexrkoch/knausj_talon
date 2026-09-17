@@ -10,32 +10,15 @@ app: board
 @mod.action_class
 class Actions:
 
-    def board_open_ticket_notes_by_letter(letter: str):
-        """Opens the notes section for the ticket labeled with the given letter via the board app's command palette"""
+    def letter_command(prefix: str, letter: str):
+        """Opens the board app's command palette and inserts the given prefix followed by the ticket letter"""
         actions.key("cmd-shift-p")
         actions.sleep("100ms")
-        actions.insert(f"Note: {letter.upper()}")
+        actions.insert(f"{prefix}{letter.upper()}")
         actions.key("enter")
-
-    def board_switch_branch_by_letter(letter: str):
-        """Switches to the git branch of the ticket labeled with the given letter via the board app's command palette"""
+    def palette_command(command: str):
+        """Opens the board app's command palette and inserts the given prefix followed by the ticket letter"""
         actions.key("cmd-shift-p")
         actions.sleep("100ms")
-        actions.insert(f"Branch: {letter.upper()}")
+        actions.insert(f"{command}")
         actions.key("enter")
-
-    def board_open_ticket_in_jira(letter: str):
-        """Opens the Jira link of the ticket labeled with the given letter via the board app's command palette"""
-        actions.key("cmd-shift-p")
-        actions.sleep("100ms")
-        actions.insert(f"Jira: {letter.upper()}")
-        actions.key("enter")
-
-    def board_open_mr(letter: str):
-        """Opens the MR of the ticket labeled with the given letter via the board app's command palette"""
-        actions.key("cmd-shift-p")
-        actions.sleep("100ms")
-        actions.insert(f"MR: {letter.upper()}")
-        actions.key("enter")
-
-
